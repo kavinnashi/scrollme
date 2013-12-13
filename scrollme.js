@@ -11,7 +11,9 @@
                                 var  pos = "."+$(this).attr("scroll");
                                   
 								  // animate to move to that element
-								   $("html, body").animate({ scrollTop: $(pos).offset().top }, 500);
+								  // * .stop() added by Gianfilippo Balestriero *
+								  // the stop function delete previous animation. This stop the loop
+								   $("html, body").stop().animate({ scrollTop: $(pos).offset().top }, 500);
 
 	   });
    }
