@@ -80,6 +80,14 @@
             wrapper.className = `wrapper ${templateName}`;
         }
 
+$max-width: 100; // Set the maximum percentage width
+
+@for $i from 1 through $max-width {
+  .w-#{$i} {
+    width: #{$i}%;
+  }
+}
+
         // Example: Apply Template 1 or Template 2
         applyTemplate("template1"); // Change to "template2" for the second layout
     </script>
